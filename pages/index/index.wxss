@@ -1,0 +1,4 @@
+.mask{
+  height: 100vh;
+  background-color: #00AE74;
+}

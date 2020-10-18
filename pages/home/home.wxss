@@ -1,0 +1,82 @@
+.custom_bar{
+ 
+  background-color: #10AE74;
+}
+.select{
+
+  background: #10AE74;
+
+}
+.select_btn{
+  width: auto !important;
+  font-weight: normal;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background: #10AE74;
+  color: #fff;
+  margin-left: 20rpx !important;
+}
+.avatar{
+  height: 60rpx;
+  overflow: hidden;
+  width: 60rpx;
+  border-radius: 50%;
+}
+.nickname{
+  margin-left: 10rpx;
+  display: inline-block;
+  width: 50vw;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.logo{
+
+  position: relative;
+  background-color: #fff;
+}
+.logo image{ 
+  width: 100%;
+
+}
+
+.logo .login-logo{
+   top:50%;
+   left: 50%;
+   position: absolute;
+   transform: translate(-50%,-50%);
+    width: 240rpx ;
+}
+.home_main{
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: #fff;
+}
+.home_main>view{
+  width: 50%;
+  margin:36rpx 0;
+  text-align: center;
+}
+.home_main>view .iconfont{
+    font-size: 70rpx;
+    color: #00AE74;
+  
+}
+.home_main>view>view{
+  margin-top: 20rpx;
+    color: #8a8a8a;
+    font-size:30rpx;
+}
+.active{
+  color: #ccc;
+}
+.container{
+  display: flex;
+align-items: center;
+}

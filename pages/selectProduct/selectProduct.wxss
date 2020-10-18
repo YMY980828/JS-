@@ -1,0 +1,68 @@
+.searchList{
+  height: 106rpx;
+}
+.searchList>view{
+  display: flex;
+  padding:  20rpx;
+  height: 100%;
+  box-sizing: border-box;
+}
+.searchList>view>view:nth-child(1)
+{
+  flex:1;
+  box-sizing: border-box;
+  margin-right: 10rpx;
+}
+.searchList>view>view:nth-child(2)
+{
+    width: 160rpx;
+}
+.searchList>view>view:nth-child(2) .clickSearch{
+  background-color: #07c160;
+  border:2rpx solid #07c160;
+  box-shadow: 0 0 2px 2px #e6e6e6;
+  color: #fff;
+  padding: 0 20rpx ;
+  box-sizing: border-box;
+  height:70rpx ;
+  width: 160rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 70rpx;
+ }
+ .searchList_left{
+   display: flex;
+   padding-left: 20rpx;
+   box-sizing: border-box;
+   align-items: center;
+   background-color: #f4f4f4;
+   border-radius: 70rpx;
+ }
+ .searchList_left input{
+   height: 100%;
+   flex:1;
+   margin-left: 10rpx;
+   box-sizing: border-box;
+ }
+ .counts{
+  background-color: #efeff4;
+  padding: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #515151;
+ 
+}
+.ent_view{
+  height: calc(100vh - 106rpx - 80rpx);
+ }
+ .ent{
+   height: 120rpx;
+   line-height: 120rpx;
+   padding: 10rpx 16rpx;
+   border-bottom: 2rpx dashed #ccc;
+ }
+ .ent>text:nth-child(2)
+ {
+   margin-left: 40rpx;
+ }

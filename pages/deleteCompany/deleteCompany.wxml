@@ -1,0 +1,17 @@
+<view class="delete_Copmpany"> 
+ <view class="list" > 
+  <view> <text>产品类别:</text><text class="star" >*</text></view>
+  <picker mode="selector" 
+  bindchange="selectProductClass" 
+  range="{{productClassNames}}">
+   <view class="picker_view"> {{value===''?info.productClassName:productClassNames[value]}}</view>
+  </picker>
+ </view>
+
+ <view class="list" > 
+  <view> <text>产品名称:</text><text class="star" >*</text></view>
+   <input  bindinput="put" placeholder="请选择产品名称"  value="{{info.productName}}"></input>
+ </view>
+
+ <view class="printBtns"> <button  bindtap="research">删除产品</button> </view>
+</view>

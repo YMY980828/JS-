@@ -1,0 +1,24 @@
+<view class="find">
+<sort></sort>
+<view class="counts">共计:  <text>{{data.total}}</text> 条数据</view>
+<scroll-view class="wrapperCard" scroll-y="{{true}}" bindscrolltolower="loadimgMore">
+
+   <view  class="cards">
+ <view wx:for="{{data.rows}}" wx:key="index" class="card_list" bindtap="watchCard" data-info="{{item}}">
+ <view class="card_wrapper">
+  <view class="card_left"><text>{{index+1}}.产品名称: {{item.productName}}</text></view>
+
+  </view>
+    <view> <text>产品名称:</text> {{item.productName}}</view>
+  <view> <text>查询时间:</text> {{item.searchTimeStr}}</view>
+  <view> <text>主体名称:</text> {{item.entName}}</view>
+ 
+ </view>
+</view>
+
+       <!-- loading开始 -->
+        <loading wx:if="{{data.rows.length<data.total}}"> </loading>
+    <!-- loading结束 -->
+
+</scroll-view>
+</view>

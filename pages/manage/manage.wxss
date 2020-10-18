@@ -1,0 +1,47 @@
+.bg{
+  height: 40vh;
+  position: relative;
+}   
+.bg image{
+  width: 100%;
+}
+.bg .logo{
+  position: absolute;
+  left: 50%;
+  top:40%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.bg .logo>view{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 16rpx;
+}
+.bg .logo>view>image{
+  border-radius: 50%;
+  width: 60rpx;
+  height:  60rpx;
+  padding: 10rpx;
+  border:4rpx solid #fff ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name{
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80vw;
+  display: inline-block;
+}
+.exit{
+  padding: 20rpx;
+}
+.exit .iconfont{
+  margin-right: 20rpx;
+}
+.active{
+  background-color: #f4f4f4;
+}

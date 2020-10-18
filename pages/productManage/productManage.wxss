@@ -1,0 +1,44 @@
+@import "../../common/css/card.wxss";
+.counts{
+  background-color: #efeff4;
+  padding: 10rpx 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #515151;
+}
+.add{
+  float: right;
+  color:#00AE74;
+} 
+.wrapperCard{
+  height: calc(100vh - 80rpx);
+}
+.sort{
+  display: flex;
+  height: 60rpx;
+  background-color: #fff;
+  border-bottom: 2rpx solid #f1f1f1;
+}
+.sort .iconfont{
+  font-size: 12rpx;
+  transition:all .2s ;
+}
+.search{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx 0;
+}
+.search .iconfont{
+  font-size:30rpx;
+  color: #000;
+}
+.sort>view:nth-child(1)
+{
+  border-right: 1rpx solid #ccc;
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

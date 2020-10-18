@@ -1,0 +1,31 @@
+ <view class="watchCard"> 
+   <view class="shortPrintCode" style="text-align:right;"> 合格证编号:{{data.shortPrintCode}}  </view>
+  <view class="bg_wrapper">
+   <image src="../../common/img/watch_bg.png" mode="widthFix"></image>
+  
+   <view class="content"> 
+    
+    <view class="name"> 食用农产品合格证 </view>
+    <!-- <view class="name">Certificate of edible agricultural products</view> -->
+    
+    <view> 我承诺: </view>
+    <view class="protocal"> 
+     <view><text class="iconfont icon-yes-sl"></text>没有使用禁限农药兽药,停用兽药和非法添加物</view>
+
+       <view> <text class="iconfont icon-yes-sl"></text>上市农产品农药安全间隔期、兽药休药期规定</view>
+        <view> <text class="iconfont icon-yes-sl"></text>对食用农产品合格证对真实性负责</view>
+        <view class="gap"> </view>
+    </view> 
+   
+    <view>产品名称:{{data.productName}}  </view>
+    <view> 数量(重量):{{data.num}}{{data.unitName}}  </view>
+    <view> 产地:{{data.address}}  </view>
+    <view> 联系方式:{{data.contactPhone}}  </view>
+    <view> 生产者:{{data.entName}}  </view>
+    <view> 开具日期:{{data.issueTimeStr}}  </view>
+     <!-- <image lazy-load src="{{data.signature}}"  mode="widthFix"></image> -->
+   </view> 
+  </view> 
+
+ 
+ </view>

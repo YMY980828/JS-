@@ -1,0 +1,20 @@
+<view>
+<view class="bg">
+<image src="https://jiangsu-img-hgz.snzfnm.com/jshgz_weixin_logo.jpg" mode="widthFix"></image>
+<!-- <image src="../../common/img/bg.png" mode="widthFix"></image>
+<image class="login-logo" src="../../common/img/hgz-js-logo.png" mode="widthFix"></image> -->
+</view>
+ <view class="login">
+<input   bindinput="UserNamePut" placeholder="登录账号" placeholder-class="holder" ></input>
+<input   bindinput="PassWordPut" placeholder="密码" password='{{true}}'  ></input>
+<button bindtap="login">立即登录</button>  
+<view class="tip tip1">注:</view>
+<view class="tip">
+   1. 请使用江苏省农产品质量追溯平台的账号与密码登录。
+ </view>
+<view class="tip">  2. 未注册用户请到江苏省农产品质量追溯平台进行注册。</view> 
+ </view>
+
+
+</view>
+   

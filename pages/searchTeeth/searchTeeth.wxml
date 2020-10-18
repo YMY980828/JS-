@@ -1,0 +1,7 @@
+<view class="lists"> 
+ <view  class="list" wx:for="{{list}}" wx:key="index" bindtap="connect" data-index="{{index}}"> 
+   <view>{{item.name == '' ? '未知设备': item.name}}</view>
+   <view class="deviceId">{{item.deviceId}}</view>
+ </view>
+
+</view>

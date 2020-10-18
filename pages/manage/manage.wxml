@@ -1,0 +1,21 @@
+<view>
+<view class="bg">
+  <image  mode="widthFix" src="../../common/img/bg.png"> </image>
+  <view class="logo">
+    <view><image src="../../common/img/user.png" mode="widthFix"></image></view> 
+    <text class="name">{{name}}</text>
+  </view>
+<view class="exit" hover-class="active" bindtap="exit">
+<text class="iconfont icon-out"></text>
+<text>注销当前企业绑定信息</text>  
+</view>
+
+<!-- <view class="exit"  hover-class="active" bindtap="toCertification">
+<text class="iconfont icon-out"></text>
+<text>实名认证</text>  
+</view> -->
+
+
+</view>
+</view>
+

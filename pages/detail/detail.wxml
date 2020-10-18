@@ -1,0 +1,66 @@
+<view class="detail">
+<view class="detail_item" wx:if="{{isAddmin}}">
+<label> 企业名称:<text>*</text> </label>
+<view bindtap="selectCompany"> <input disabled placeholder="请选择企业" value="{{info.entName}}"></input>  </view>
+</view>
+      
+<view class="detail_item" >
+<label> 产品名称:<text>*</text> </label>
+<view bindtap="selectProduct"> <input disabled placeholder="请选择产品" value="{{productName}}"></input>  </view>
+</view> 
+     
+<view class="detail_item">
+<label> 产品数量<text>*</text> </label>
+<view> <input bindinput="selectcount"  type="digit"  placeholder="请填写产品数量" ></input>  </view>
+</view>
+
+<view class="detail_item">
+<label> 产品单位<text>*</text> </label>
+<view> <picker range="{{array}}" bindchange="selecteum">{{value>=0?array[value]:'请选择产品单位'}}</picker>  </view>
+</view> 
+
+<view class="detail_item">
+<label> 生产日期:<text>*</text> </label>
+<view> <picker  bindchange="selectDate" mode="date">{{selectdate==''?date:selectdate}}</picker>  </view>
+</view>
+
+<view class="sign">
+ <text>签名:</text>
+</view>
+
+<view class="content" >
+<view bindtap="showSignPage" >
+<view wx:if="{{flag}}">
+<text class="iconfont icon-signature"></text>
+<view>签名</view>
+</view>
+<view class="signature" wx:else> <image src="{{imgUrl}}" mode="widthFix"></image> </view>
+</view>
+<button class="commit" bindtap="commit">提交合格证</button>
+</view>
+<!-- 签名页 -->
+<view class="SignPage {{isShowPage?'active':''}}">
+
+<view class="PageTop"> 
+<text>在方框中签名:</text>
+<view class="operations">
+ <button size="mini" bindtap="cancel">取消</button>
+  <button size="mini" bindtap="clear">重新签名</button>
+   <button size="mini" bindtap="upload">上传签名</button>
+</view>
+</view>
+
+
+<view class="canvas">
+<canvas id="firstCanvas"  canvas-id="firstCanvas" style="width:100%"   bindtouchmove="move"  bindtouchstart="start"  ></canvas>
+</view>
+
+
+
+
+
+
+</view>
+
+
+</view>

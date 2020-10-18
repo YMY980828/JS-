@@ -1,0 +1,21 @@
+<view class="selectProduct">
+<!-- 搜索框开始 -->
+ <view class=" searchList" > 
+ <view> 
+ <view class="searchList_left"> <text class="iconfont icon-search"> </text> <input placeholder="请输入搜索关键词"></input></view>
+ <view><button class="clickSearch">搜索</button></view>
+ </view>
+ </view>
+<!-- 搜索框结束 -->
+<view class="counts">总数:  <text>{{data.total}}</text> 个</view>
+ <scroll-view class="ent_view" scroll-y="{{true}}" bindscrolltolower="loadimgMore">
+ <view>
+  <view wx:for="{{data.rows}}" wx:key="index" class="ent" bindtap="select" data-index="{{index}}">
+    <text>{{index+1}}.</text>
+    <text>{{item.productName}}</text>
+   </view>
+   <loading wx:if="{{data.rows.length<data.total}}"></loading>
+ </view>
+ </scroll-view>
+</view>
+

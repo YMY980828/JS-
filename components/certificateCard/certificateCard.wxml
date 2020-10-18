@@ -1,0 +1,13 @@
+<view  class="cards">
+ <view wx:for="{{data.rows}}" wx:key="index" class="card_list" bindtap="watchCard" data-info="{{item}}">
+ <view class="card_wrapper">
+  <view class="card_left"><text>{{index+1}}.产品名称: {{item.productName}}</text></view>
+
+  </view>
+    <view> <text>产品名称:</text> {{item.productName}}</view>
+  <view> <text>生产日期:</text> {{item.createTime}}</view>
+  <view> <text>打印数量:</text> {{item.printCount}}</view>
+  <view> <text>主体名称:</text> {{item.entName}}</view>
+  <view> <text>产地:</text> {{item.areaPath}}</view>
+ </view>
+</view>

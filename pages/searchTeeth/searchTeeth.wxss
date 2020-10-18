@@ -1,0 +1,9 @@
+.list{
+  padding: 20rpx 10rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.deviceId{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,41 @@
+<view class="custom_bar"  style="height:{{top}}px"  >
+
+</view>
+<view class="select" style="height:{{height}}px" >
+
+<button  class="  select_btn" open-type="getUserInfo" bindgetuserinfo="getuserinfo">
+
+<image wx:if="{{avatarUrl!=''}}" class="avatar" src="{{avatarUrl}}"></image>
+<text  wx:else   class="iconfont icon-icon-"></text>
+
+<view  hover-class="active" class="nickname" >{{nickname}}</view>
+
+
+</button>    
+</view>    
+   
+<view class="logo">
+<image src="https://jiangsu-img-hgz.snzfnm.com/jshgz_weixin_logo.jpg" mode="widthFix"></image>
+<!-- <image class="login-logo" src="../../common/img/hgz-js-logo.png" mode="widthFix"></image> -->
+</view>
+<view class="home_main">
+  <view  bindtap="open" data-name="create">
+  <text class="iconfont icon-print"></text>
+  <view>合格证创建</view>
+  </view>
+   <view bindtap="open" data-name="certificate">
+  <text class="iconfont icon-decord"></text>
+  <view>电子合格证</view>
+  </view>
+   <view bindtap="open" data-name="find">
+  <text class="iconfont icon-search"></text>
+  <view>合格证查询</view>
+  </view>
+   <view bindtap="open" data-name="productManage">
+  <text class="iconfont icon-infoManage"></text>
+  <view>产品管理</view>
+  </view>
+
+ <!-- <button bindgetuserinfo="getuserinfo" open-type="getUserInfo">用户信息</button> -->
+
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "查看合格证",
+  "navigationBarBackgroundColor": "#00AE74",
+  "navigationBarTextStyle": "white",
+  "disableScroll":true
+}

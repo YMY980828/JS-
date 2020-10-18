@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "myPicker":"/components/picker/myPicker"
+  }
+  
+}

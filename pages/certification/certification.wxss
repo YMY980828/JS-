@@ -1,0 +1,131 @@
+.certification_header{
+  padding: 20rpx;
+}
+.title{
+
+  font-size: 48rpx;
+}
+.des,.title,.text1{
+  font-weight: 700;
+}
+.text2{
+color: #8c8c8c;
+}
+.certificate_info{
+  margin-top: 60rpx;
+}
+.btn{
+  color: #10AE74;
+  background: rgba(16,174,116,.5);
+}
+.submit{
+  color: #fff;
+  background:#10AE74;
+  margin: 60rpx 0 80rpx 0;
+  border-radius: 30rpx;
+}
+.next{
+  margin-top: 50rpx;
+}
+.item{
+  margin-top:10rpx ;
+  padding: 20rpx;
+
+}
+
+.item>view>text:nth-child(1){
+  font-weight: 700;
+  
+  display: inline-block;
+
+  margin: 30rpx 0 0 0;
+}
+
+.item>view>input{
+ 
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+.item>view>picker{
+  height: 80rpx;
+  line-height: 80rpx;
+ 
+  border-bottom: 2rpx solid #ccc;
+}
+
+.wrapper{
+
+  overflow: hidden;
+  
+}
+.text2{
+  margin-top: 30rpx;
+  padding: 0 20rpx;
+  border-bottom: 2rpx solid #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.picker{
+    font-weight: normal;
+     width: auto !important; 
+     padding: 10rpx 20rpx !important;
+     color: #fff;
+     background: #10AE74;
+}
+.item picker{
+  position: relative;
+  flex:1
+}
+.select_view{
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+.select_view button{
+  width: auto !important;
+  color: #fff;
+     background: #10AE74;
+     padding: 15rpx 30rpx;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 !important;
+     border-radius: 20rpx;
+}
+.certificatin_view_wrapper{
+
+  height: 100vh;
+ 
+}
+.myPicker{
+  
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #fff;
+}
+.option{
+    margin: 40rpx 40rpx 0 40rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.mask{
+  position: fixed;
+  z-index: 998;
+  background-color: rgba(0,0,0,.7);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}

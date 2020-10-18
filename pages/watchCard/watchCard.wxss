@@ -1,0 +1,80 @@
+.watchCard>view>image{
+   width: 100%;
+   position: fixed;
+   left: 0%;
+  top: 104rpx;
+  z-index: -1;
+}
+.content{
+  height: 1041rpx;
+  padding-top:70rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.content>view{
+  padding-left: 60rpx;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-weight: 540;
+  color: #000;
+  font-size: 27rpx;
+  margin-bottom: 24rpx;
+
+}
+.content>.name:nth-child(1)
+{
+  font-size: 6vw ;
+  height: auto;
+  font-weight: 540;
+  /* margin-bottom: 0rpx; */
+} 
+.content>.name:nth-child(2)
+{
+  font-size: 22rpx;
+}
+.content>.name{
+  text-align: center;
+  padding-left: 0;
+ 
+}
+.protocal>view{
+  font-size: 24rpx;
+  display: flex;
+  margin-bottom: 24rpx;
+  align-items: center;
+}
+.protocal>view>view{
+  margin-right: 4rpx;
+  width: 22rpx;
+  height: 22rpx;
+  border: 1rpx solid #000;
+  position: relative;
+ 
+}
+.protocal>view>view::after{
+  content: "√";
+  position: absolute;
+  top:0;
+  right: 0;
+  font-weight: bold;
+  font-size:3vw ;
+}
+.content image{
+   width: 300rpx;
+   position: absolute;
+   right: 80rpx;
+   bottom: 40rpx;
+}
+.bg_wrapper{
+  
+  background-color: rgba(255,255, 255, 0.6);
+}
+.shortPrintCode{
+  padding: 52rpx 20rpx 0 0;
+
+}
+.gap{
+  border: 1rpx solid #000;
+  margin-right: 60rpx;
+  box-sizing: border-box;
+}

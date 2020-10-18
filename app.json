@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/selectProduct/selectProduct",
+    "pages/logs/logs",
+    "pages/manage/manage",
+    "pages/create/create",
+    "pages/detail/detail",
+    "pages/login/login",
+    "pages/selectCompany/selectCompany",
+    "pages/certificate/certificate",
+    "pages/watchCard/watchCard",
+    "pages/find/find",
+    "pages/productManage/productManage",
+    "pages/searchTeeth/searchTeeth",
+    "pages/editCertificate/editCertificate",
+    "pages/productDeatil/productDeatil",
+    "pages/deleteCompany/deleteCompany",
+    "pages/certification/certification",
+    "pages/location/location"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00AE74",
+    "navigationBarTitleText": "合格证",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "JS合格证请求获取您的位置信息"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#00AE74",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/common/img/home.png",
+        "selectedIconPath": "/common/img/home_selected.png"
+      },
+      {
+        "pagePath": "pages/manage/manage",
+        "text": "管理",
+        "iconPath": "/common/img/manage.png",
+        "selectedIconPath": "/common/img/manage_selected.png"
+      }
+    ]
+  }
+}

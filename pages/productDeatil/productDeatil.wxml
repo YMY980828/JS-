@@ -1,0 +1,28 @@
+
+<view class="editCertificate">
+
+ <view class="list" wx:if="{{flag}}"  bindtap="selectCompany"> 
+  <view> <text>企业名称:</text><text class="star" >*</text></view>
+  <view >{{info.entName==''?'请选择企业名称':info.entName}}</view>
+ </view>
+ 
+
+ <view class="list" > 
+  <view> <text>产品类别:</text><text class="star" >*</text></view>
+  <picker class="picker_view_wrapper" mode="selector" 
+  bindchange="selectProductClass" 
+  range="{{productClassNames}}">
+   <view class="picker_view"> {{value===''?'请选择产品类别':productClassNames[value]}}</view>
+  </picker>
+ </view>
+
+
+ 
+ <view class="list" > 
+  <view> <text>产品名称:</text><text class="star" >*</text></view>
+   <input  bindinput="put" placeholder="请选择产品名称"  ></input>
+ </view>
+
+
+ <button bindtap="submit">提交产品</button>
+</view>

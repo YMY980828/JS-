@@ -1,0 +1,66 @@
+<view class="sort"> 
+  <view class="sort_left">
+   <view class="area {{isShowAreaList?'active':''}}" catchtap="showAreaList">
+    <text>地区筛选</text>
+    <text class="iconfont icon-triangle"></text>
+  </view> 
+   <view class="time {{isShowDateList?'DateActive':''}}" catchtap="showDateList">
+    <text>时间筛选</text>
+    <text class="iconfont icon-triangle"></text>
+  </view>
+  </view>
+   <view class="search {{isSearchList?'searchactive':''}}" catchtap="showSearchList">
+   <text class="iconfont icon-search  "></text>
+  </view>
+  </view>
+  <!-- 选择城市开始 -->
+ <view class="areaSelect {{isShowAreaList?'slide':''}}"  wx:if="{{isShowAreaList}}"> 
+    <view class="area_item" > 
+    <text>选择城市:</text> 
+ 
+        <picker  wx:if="{{isAddmin}}" bindchange="bindareacityrChange"   range="{{areacity}}">
+         <view >{{areacityIndex>=0?areacity[areacityIndex]:'请选择城市'}}</view>
+        </picker>
+         <view wx:else>{{areaCodeCity}}</view>
+      </view>
+     
+    <view class="area_item"  > <text>选择区县:</text>
+
+    <picker wx:if="{{isAddmin}}"  bindchange="bindareacountyChange" range="{{areacounty}}">
+    <view>{{areacountyIndex>=0?areacounty[areacountyIndex]:'请选择区县'}}</view>
+    </picker>
+     <view wx:else>{{areaCodeDistrict}}</view>
+    </view>
+    <view class="area_item last_item" > <text>选择街道:</text> 
+     <picker wx:if="{{isAddmin}}" bindchange="bindareastreetChange" range="{{areastreet}}">
+   <view>  {{areastreetIndex>=0?areastreet[areastreetIndex]:'请选择街道'}}</view>
+     </picker>
+      <view wx:else>{{areaCodeSubdistrict}}</view>
+    </view>
+    <view class="btns"><button>重置</button><button>确认</button> </view>
+   </view>
+<!-- 选择城市结束 -->
+<!-- 选择时间开始 -->
+ <view class="areaSelect {{isShowDateList?'slide':''}}" wx:if="{{isShowDateList}}">
+    <view class="area_item"> <text>开始日期:</text> 
+     <picker mode="date" start="2016-01-01" end="time" bindchange="startchange" >{{startDate===''?'请选择开始日期':startDate}}</picker></view>
+    <view class="area_item last_item"> <text>结束日期:</text>
+     <picker mode="date"   bindchange="endchange"  start="{{startDate===''?'2016-01-01':startDate}}" end="time">{{endDate===''?'请选择结束日期':endDate}}</picker></view>
+    <view class="btns"><button>重置</button><button>确认</button> </view>
+   </view>
+<!-- 选择时间结束 -->
+<!-- 搜索主题名称 -->
+ <view class="areaSelect searchList {{isSearchList?'slide':''}}" wx:if="{{isSearchList}}"> 
+ <view> 
+ <view class="searchList_left"> <text class="iconfont icon-search"> </text> <input placeholder="请输入主体名称进行搜索"></input></view>
+ <view><button class="clickSearch">搜索</button></view>
+ </view>
+ </view>
+<!--  -->
+
+
+<!-- 蒙版 -->
+ <view class="mask" wx:if="{{isShowDateList||isShowAreaList||isSearchList}}" bindtap="clear"> </view>
+<!-- 蒙版-->
+
+ 

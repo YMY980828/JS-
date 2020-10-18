@@ -1,0 +1,12 @@
+<view class="certificate"> 
+<sort></sort>
+  <view class="counts"> 共<text>{{data.data}}</text>张</view>
+<scroll-view class="wrapperCard" scroll-y="{{true}}" bindscrolltolower="loadimgMore">
+
+       <certificateCard data="{{data}}"></certificateCard>
+       <!-- loading开始 -->
+        <loading wx:if="{{data.rows.length<data.total}}"> </loading>
+    <!-- loading结束 -->
+
+</scroll-view>
+</view>

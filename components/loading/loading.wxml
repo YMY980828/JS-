@@ -1,0 +1,3 @@
+ <view class="loading">
+   <image src="../../common/img/loading.gif" mode="widthFix"></image>
+ </view>

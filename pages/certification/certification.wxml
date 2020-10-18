@@ -1,0 +1,150 @@
+<!-- 实名认证界面 -->
+
+
+<view class="certificatin_view_wrapper">
+<!--  -->
+<view class="certification_header">
+<view class="header">
+<view class="title">授权</view> 
+<!--  wx:if="{{info.state=='Y2'&&info.data.length>0}}" -->
+<picker  bindchange="change" wx:if="{{showEntDescs.length>0}}"  class=" range" range="{{showEntDescs}}"><button class="picker">选择历史绑定企业</button></picker>
+</view>   
+    
+<view class="des">请正确填写实名信息</view>
+
+<view class="certificate_info" >
+<view class="wrapper">
+<text class="text1">社会信用代码(或身份证):</text>
+<input value="{{value}}"  bindblur="blur"   class="text2"></input>
+
+</view>
+  <button bindtap="next"  wx:if="{{info.state=='Y2'}}" wx:if="{{!showdetail}}"  class="btn next">下一步</button>  
+</view>
+
+</view>  
+
+   <view class="item"   wx:if="{{showdetail}}"> 
+
+      <!-- <view>   
+    <text>生产者姓名:</text>
+
+     <input bindblur="getRelName"  wx:if="{{info.state=='Y2'}}"     placeholder="请输入生产者姓名"> </input>
+   <input bindblur="getRelName"  wx:if="{{info.state=='Y'}}"  value="{{info.data.realName}}"   placeholder="请输入生产者姓名"> </input>
+
+    </view> -->
+
+   <view> 
+    <text>主体名称(或姓名):</text>   
+     <input  bindblur="getentName"   wx:if="{{info.state=='Y2'}}" placeholder="请输入主体名称(或姓名)"> </input>
+     <input  bindblur="getentName"  wx:if="{{info.state=='Y'}}"  value="{{info.data.entName}}"  placeholder="请输入主体名称(或姓名)"> </input>
+    </view>
+
+    <!-- <view>
+    <text>企业注册号:</text>
+     <input bindblur="getentregisteredNumber" wx:if="{{info.state=='Y2'}}"  placeholder="请输入企业注册号"> </input>
+     <input bindblur="getentregisteredNumber" wx:if="{{info.state=='Y'}}" value="{{info.data.registeredNumber}}"  placeholder="请输入企业注册号"> </input>
+    </view> -->
+
+     <view>
+    <text>所属行业:</text>  
+      
+   <picker  bindchange="bindindustryChange" range="{{industry}}">
+   <view wx:if="{{info.state=='Y2'}}">  {{industryIndex>=0?industry[industryIndex]:'请选择所属行业'}}</view>
+    <view wx:if="{{info.state=='Y'}}">  {{industryNames==""?'请选择所属行业':industryNames}}</view>
+     </picker>
+
+    </view>
+  
+    <view> 
+    <text>主体类别:</text> 
+  
+   <picker  bindchange="bindcompanyChange"  range="{{company}}">
+   <view wx:if="{{info.state=='Y2'}}">  {{companyIndex>=0?company[companyIndex]:'请选择主体类别'}}</view>
+    <view wx:if="{{info.state=='Y'}}">  {{entClassifyName==""?'请选择主体类别':entClassifyName}}</view>
+     </picker>
+    </view>
+
+  <view>
+    <text>负责人:</text>
+    <input  bindblur="getcontactPerson" wx:if="{{info.state=='Y2'}}"  placeholder="请填写负责人姓名"> </input>
+     <input  bindblur="getcontactPerson"  wx:if="{{info.state=='Y'}}"  value="{{info.data.contactPerson}}" placeholder="请填写负责人姓名"> </input>
+    </view>
+
+    <view>
+    <text >手机号:</text>
+
+      <view class="select_view">
+   <!-- value="{{info.data.address}}" -->
+    <input style="flex:1" bindblur="getcontactPhone" wx:if="{{info.state=='Y2'}}"  placeholder="请输入手机号"> </input>
+  <input style="flex:1"  bindblur="getcontactPhone" wx:if="{{info.state=='Y'}}"  value="{{info.data.contactPhone}}"  placeholder="请输入手机号"> </input>
+    <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >自动获取</button> -->
+   </view>
+ 
+    </view>
+
+
+    <view>
+    <text>详细地址:</text>
+
+   <view class="select_view">
+   <!-- value="{{info.data.address}}" -->
+      <input style="flex:1" bindblur="getaddress"  value="{{address}}"  wx:if="{{info.state=='Y2'}}"  placeholder="请输入详细地址"> </input>
+    <input style="flex:1" bindblur="getaddress"  value="{{address}}"  wx:if="{{info.state=='Y'}}"    placeholder="请输入详细地址"> </input>
+    <button bindtap="getlocation">自动获取</button>
+   </view>
+   
+    </view>
+
+<!-- <view>
+    <text>地区编码-市:</text>
+         <picker bindchange="bindareacityrChange"   range="{{areacity}}">
+         <view wx:if="{{info.state=='Y2'}}">{{areacityIndex>=0?areacity[areacityIndex]:'请选择城市'}}</view>
+         <view wx:if="{{info.state=='Y'}}">  {{areaCodeCityName}}</view>
+        </picker>
+
+    </view>
+
+  <view>
+    <text>地区编码-区:</text>
+   <picker   bindchange="bindareacountyChange" range="{{areacounty}}">
+    <view wx:if="{{info.state=='Y2'}}">{{areacountyIndex>=0?areacounty[areacountyIndex]:'请选择区县'}}</view>
+    <view wx:if="{{info.state=='Y'}}">  {{areaCodeDistrictName}}</view>
+    </picker>
+    </view>
+  <view>
+    <text>地区编码-街道:</text>
+      <picker  bindchange="bindareastreetChange" range="{{areastreet}}">
+   <view wx:if="{{info.state=='Y2'}}">  {{areastreetIndex>=0?areastreet[areastreetIndex]:'请选择街道'}}</view>
+    <view wx:if="{{info.state=='Y'}}">  {{areaCodeSubdistrictName}}</view>
+     </picker>
+    </view> -->
+
+  <view>
+    <text>选择区域:</text>
+
+      <view  class="select_view" bindtap="showPickerFn">
+   <view wx:if="{{info.state=='Y2'}}">  {{areaCodeCityName==''?'请选择区域':areaCodeCityName+"/"+areaCodeDistrictName+"/"+areaCodeSubdistrictName}}</view>
+    <view wx:if="{{info.state=='Y'}}">  {{areaCodeCityName+"/"+areaCodeDistrictName+"/"+areaCodeSubdistrictName}}</view>
+     </view>
+
+    </view>
+
+  <button  class="submit" bindtap="submit">  提交信息  </button>
+
+  
+
+   </view>
+<!--     -->
+   <view class="myPicker"  hidden="{{!showPicker}}">
+   <view class="option">
+    <view bindtap="hidePicker">取消</view>
+     <view bindtap="confirmPicker">确定</view>
+   </view>
+      <myPicker bindmyevent="receivePicker"></myPicker>  
+    </view>
+
+ <view class="mask" hidden="{{!showPicker}}">
+</view>
+    
+</view>
+

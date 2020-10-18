@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "card":"../../components/card/card",
+    "sort":"../../components/sort/sort",
+    "loading":"../../components/loading/loading"
+  },
+  "navigationBarTitleText": "合格证列表",
+  "navigationBarBackgroundColor": "#00AE74",
+  "navigationBarTextStyle": "white",
+  "disableScroll":true
+}

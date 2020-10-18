@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "产品详情",
+  "navigationBarBackgroundColor": "#00AE74",
+  "navigationBarTextStyle": "white",
+  "disableScroll":true
+}

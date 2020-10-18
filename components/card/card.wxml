@@ -1,0 +1,14 @@
+<view  class="cards">
+ <view wx:for="{{data.rows}}" wx:key="index" class="card_list"  bindtap="tap" data-index="{{index}}">
+ <view class="card_wrapper">
+  <view class="card_left"><text>{{index+1}}.产品名称: {{item.productName}}</text>(<text>{{item.printNum>0?'已打印':'未打印'}}</text>) </view>
+  <view class="card_right" catchtap="print" data-index="{{index}}"> <text class="clickPrint">点击打印</text> </view>
+  </view>
+    <view> <text>产品名称:</text> {{item.productName}}</view>
+  <view> <text>生产日期:</text> {{item.produceTime}}</view>
+  <view> <text>产品重量:</text> {{item.num}}{{item.unitName}}</view>
+  <view> <text>联系方式:</text> {{item.contactPhone}}</view>
+  <view> <text>主体名称:</text> {{item.entName}}</view>
+  <view> <text>产地:</text> {{item.areaPath}}</view>
+ </view>
+</view>

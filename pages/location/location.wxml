@@ -1,0 +1,11 @@
+<view class="map_container"> 
+  <map class="map" id="map" longitude="{{data.wxMarkerData[0].longitude}}" latitude="{{data.wxMarkerData[0].latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+</view> 
+<view class="rgc_info"> 
+  <view wx:for="{{data.wxMarkerData}}" wx:key="index"> 
+  <view hover-class="active" class="text" bindtap="getAddress" data-address="{{item.address}}">{{item.address}} </view>
+  </view>
+ <view wx:for="{{data.originalData.result.pois}}" wx:key="index"> 
+  <view class="text"  hover-class="active" bindtap="getAddress" data-address="{{item.name}}">{{item.name}} </view>
+  </view>
+</view>

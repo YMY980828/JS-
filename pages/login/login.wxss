@@ -1,0 +1,55 @@
+.bg{
+  /* height: 40vh; */
+  position: relative;
+}
+.bg image{
+  width: 100%;
+}
+.login{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.login input{
+  text-align: center;
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border:1rpx solid #515151 ;
+  margin: 20rpx;
+  border-radius: 40rpx;
+}
+button{
+  width: 80% !important;
+  margin-top: 20rpx;
+  height: 80rpx !important;
+  line-height: 80rpx !important;
+  border-radius: 40rpx !important;
+  background-color: #00AE74;
+  color: #fff;
+  padding: 0px !important;
+}
+.bg .login-logo{
+   top:50%;
+   left: 50%;
+   position: absolute;
+   transform: translate(-50%,-50%);
+    width: 240rpx ;
+}
+
+.tip{
+  /* position: fixed; */
+   width: 80%;
+   padding-top:20rpx;
+   box-sizing: border-box;
+   font-size: 30rpx;
+   color: #999;
+ text-indent: -20px;
+ padding-left: 20px;
+}
+
+.tip1{
+  padding-top:60rpx;
+  text-indent: 0;
+  padding-left: 0;
+}

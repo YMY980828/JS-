@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "certificateCard":"../../components/certificateCard/certificateCard",
+    "loading":"../../components/loading/loading",
+    "sort":"../../components/sort/sort"
+  },
+  "navigationBarTitleText": "电子合格证",
+  "navigationBarBackgroundColor": "#00AE74",
+  "navigationBarTextStyle": "white",
+  "disableScroll":true
+}

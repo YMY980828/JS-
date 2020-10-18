@@ -1,0 +1,19 @@
+.map_container{ 
+  height: 600rpx; 
+  width: 100%; 
+} 
+
+.map { 
+  height: 100%; 
+  width: 100%; 
+}
+.rgc_info .text{
+ 
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+.active
+{
+  background-color:#8c8c8c ;
+}

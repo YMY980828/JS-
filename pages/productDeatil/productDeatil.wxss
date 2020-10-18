@@ -1,0 +1,44 @@
+.editCertificate>.list{
+  display: flex;
+  height: 120rpx;
+  padding: 0 40rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.list>view:nth-child(1) text{
+    margin:0 14rpx ;
+    display: inline-block;
+}
+
+.list>picker:nth-child(2),.list>input:nth-child(2),.list>view:nth-child(2){
+   flex:1;
+   border: 1rpx solid #ccc;
+   border-radius: 8rpx;
+   display: flex;
+   align-items: center;
+   padding: 4rpx 20rpx;
+   margin-left: 10rpx;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+}
+button{
+  background-color: #00AE74;
+   width: 80vw !important;
+  color: #fff;
+  margin-top: 60rpx;
+   border-radius: 80rpx !important;
+   color: #fff;
+}
+.picker_view_wrapper{
+  position: relative;
+  height: 40rpx;
+}
+.picker_view{
+  padding: 0 20rpx;
+ top:0;
+ position: absolute;
+ left: 0;
+ right: 0;
+}

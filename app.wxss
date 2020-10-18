@@ -1,0 +1,7 @@
+/**app.wxss**/
+
+@import './common/fonts/iconfont.wxss'; 
+@import './common/css/font.wxss';
+.star{
+  color: #f00;
+}

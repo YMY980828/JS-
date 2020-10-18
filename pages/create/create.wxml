@@ -1,0 +1,66 @@
+ <view class="create" >
+<sort></sort>
+  <view class="wrapper">
+  <view class="counts">共计:  <text>{{data.total}}</text> 条数据</view>
+<scroll-view  class="wrapperCard"  scroll-top="{{top}}" scroll-y="{{true}}" bindscrolltolower="loadimgMore">
+ <view class="cards" >
+       <card data="{{data}}" bindprint="print" bindontap="editCertificate"></card>
+       <!-- loading开始 -->
+        <loading wx:if="{{data.rows.length<data.total}}"> </loading>
+    <!-- loading结束 -->
+ </view>                     
+</scroll-view>
+  </view>
+<view class="addCertificate" bindtap="addCertificate">
+<text>添加合格证</text>
+</view>
+<view bindtap="cancelprint"  class="modal" hidden="{{isShowPrint}}"> 
+  <view  catchtap="cancelbuble"  class="content  {{isShowPrint?'':'move'}}">
+     <view class="content_top"> <text class="cancelprint" bindtap="cancelprint">×</text><text class="option">打印选项</text></view>
+     <view class="countWrapper"> <view><text>打印数量:<text class="star">*</text></text> 
+     <view class="operationCount"> <text bindtap="cut">-</text> <input type="number"  bindblur="blur"  value='{{count}}'></input><text bindtap="add">+</text></view></view></view>
+
+      <view class="method"> 
+      
+      <!-- <view>
+       <text>打印方式:</text>
+       <view class="box"> 
+       <view bindtap="controlDes">
+        <text class="iconfont icon-dui1 {{flag?'':'actively'}}" ></text>
+           正向打印</view>
+       <view bindtap="syncontrolDes">
+         <text class="iconfont icon-dui1 {{flag?'actively':''}}" ></text>
+            反向打印</view>
+       </view>
+      </view> -->
+
+  <!--  -->
+   <!-- <view class="type">  
+      <view> 
+         <text>打印机型号:</text>
+         <view class="box1">
+          <view wx:for="{{type}}" wx:key="index" bindtap="selectType" data-index="{{index}}">
+        <text class="iconfont icon-dui1  {{index==typeCount?'actively':''}}" ></text>
+           {{item.name}}</view>
+           
+         </view>
+      </view>
+   </view> -->
+
+ <!-- <view class="types">
+      <text>打印机型号:</text>
+   <radio-group bindchange="scaleType">
+   <radio value="TXT-8" checked="true"> TXT-8</radio>
+    <radio value="DS">得实</radio>
+   </radio-group>
+
+</view> -->
+
+
+  <!--   -->
+
+       </view>
+      <view class="printBtns"> <button  bindtap="cancelprint">取消</button>   <button  bindtap="research">打印</button> </view>
+  </view> 
+ </view>
+</view>

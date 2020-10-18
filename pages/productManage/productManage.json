@@ -1,0 +1,8 @@
+{
+  "usingComponents": { "loading":"../../components/loading/loading"},
+ 
+  "navigationBarTitleText": "产品管理",
+  "navigationBarBackgroundColor": "#00AE74",
+  "navigationBarTextStyle": "white",
+  "disableScroll":true
+}

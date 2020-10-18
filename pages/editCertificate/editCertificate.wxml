@@ -1,0 +1,8 @@
+<view class="editCertificate">
+ <view class="list" wx:for="{{row}}" wx:key="index"> 
+  <view> <text>{{item.title}}:</text><text class="star" >*</text></view>
+  <view> {{item.name}}</view>
+ </view>
+  
+ 
+</view>
