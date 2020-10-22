@@ -8,7 +8,7 @@
     <view class="name"> 食用农产品合格证 </view>
     <!-- <view class="name">Certificate of edible agricultural products</view> -->
     
-    <view> 我承诺: </view>
+    <view style="font-size: 28rpx;"> 我承诺: </view>
     <view class="protocal"> 
      <view><text class="iconfont icon-yes-sl"></text>没有使用禁限农药兽药,停用兽药和非法添加物</view>
 

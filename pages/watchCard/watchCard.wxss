@@ -1,3 +1,4 @@
+
 .watchCard>view>image{
    width: 100%;
    position: fixed;
@@ -17,7 +18,7 @@
   white-space: nowrap;
   font-weight: 540;
   color: #000;
-  font-size: 27rpx;
+  font-size: 25rpx;
   margin-bottom: 24rpx;
 
 }
@@ -37,12 +38,7 @@
   padding-left: 0;
  
 }
-.protocal>view{
-  font-size: 24rpx;
-  display: flex;
-  margin-bottom: 24rpx;
-  align-items: center;
-}
+
 .protocal>view>view{
   margin-right: 4rpx;
   width: 22rpx;
@@ -67,14 +63,22 @@
 }
 .bg_wrapper{
   
-  background-color: rgba(255,255, 255, 0.6);
+  background-color: rgba(255,255, 255, 0.7);
 }
 .shortPrintCode{
   padding: 52rpx 20rpx 0 0;
-
+  font-size: 28rpx;
 }
 .gap{
-  border: 1rpx solid #000;
+  border: 1rpx solid #999;
   margin-right: 60rpx;
   box-sizing: border-box;
+}
+
+.protocal>view{
+  font-size: 28rpx;
+  display: flex;
+  margin-bottom: 24rpx;
+  align-items: center;
+
 }
